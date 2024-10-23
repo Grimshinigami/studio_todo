@@ -95,7 +95,7 @@ function SmallerTask({fn,fn2,giveParentData,filterType,searchVal}:
                     <p>Title</p>
                 </div>
                 <div className="w-2/3 text-left flex flex-row justify-end items-start">
-                    <p className=" flex-1">{task.title}</p>
+                    <p className=" flex-1 break-words overflow-y-scroll no-scrollbar">{task.title}</p>
                 </div>
             </div>
             {showRest==task.id && <><div className=" w-full flex justify-start">
@@ -103,7 +103,7 @@ function SmallerTask({fn,fn2,giveParentData,filterType,searchVal}:
                     <p>Description</p>
                 </div>
                 <div className="w-2/3 text-left flex flex-row justify-end items-start">
-                    <p className=" flex-1 flex flex-wrap">{task.desc}</p>
+                    <p className=" flex-1 flex flex-wrap break-words overflow-y-scroll no-scrollbar">{task.desc}</p>
                 </div>
             </div>
             <div className=" w-full flex items-cente justify-start">

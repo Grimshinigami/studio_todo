@@ -18,16 +18,6 @@ import { Provider } from 'react-redux';
 import DeleteTodo from './components/DeleteTodo';
 import ButtonComp from './components/ButtonComp';
 
-const tasks = [
-  {
-    title:"EKL",
-    desc:"Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna",
-    dueDate:"12/10/24",
-    status:"In Progress",
-    priority:"Low"
-  }
-]
-
 export default function Home() {
   
   const wind = useWindowSize();
@@ -194,12 +184,12 @@ export default function Home() {
             />
           </Provider>}
         </div>
-        {showOverlayMenu && 
+        
+      </div>
+      {showOverlayMenu && 
       <Provider store={store}>
         <OverlayMenu title={overlayTitle} fn={setShowOverlayMenu} elementId={idFromChild}/>
       </Provider>}
-      </div>
-      
       {showDeleteMenu && 
       <Provider store={store}>
         <DeleteTodo fn={setDeleteMenu} elementId={idFromChild}/>

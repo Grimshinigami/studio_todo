@@ -71,8 +71,8 @@ function Task({fn,fn2,giveParentData,filterType,searchVal}:
       {tasks.map((task:TaskT)=>(
         <div className={`w-full flex flex-row justify-start p-6 font-medium ${counter%2!=0?'bg-[#FFF9F8]':''}`} key={task.id}>
         <p className=" w-[12.5%] text-xs md:text-sm lg:text-base">{++counter}</p>
-        <p className=" w-[12.5%] text-xs md:text-sm lg:text-base">{task.title}</p>
-        <p className=" w-[35%] text-xs md:text-sm lg:text-base flex flex-wrap">{task.desc}</p>
+        <p className=" w-[12.5%] text-xs md:text-sm lg:text-base break-words">{task.title}</p>
+        <p className=" w-[35%] text-xs md:text-sm lg:text-base break-words">{task.desc}</p>
         <p className=" w-[10%] text-xs md:text-sm lg:text-base overflow-auto">{task.dueDate}</p>
         <div className=" w-[11%] text-xs md:text-sm lg:text-base overflow-auto flex items-start">
           <p className={`xl:w-3/4 ${task.status.toLowerCase()==='Completed'.toLowerCase()?'bg-[#03A229]':'bg-[#F5D20E]'} px-4 py-1 rounded-2xl text-white`}>
