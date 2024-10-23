@@ -80,7 +80,7 @@ function OverlayMenu({title,status,fn,elementId}:
   
 
   return (
-    <div className=' w-screen h-screen absolute z-10 bg-black/50 border-2 border-black -top-0 flex justify-center items-center'>
+    <div className=' w-full h-full absolute z-10 bg-black/50 border-2 border-black -top-0 flex justify-center items-center'>
       <div className={`w-[95%] md:w-[40%] bg-white rounded-md flex flex-col p-2 z-20 pt-2`}>
         <div className=' w-full h-8 flex items-center py-8'>
           <p className=' pl-2 text-black text-xl font-semibold '>{title}</p>

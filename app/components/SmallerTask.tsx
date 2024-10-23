@@ -64,7 +64,7 @@ function SmallerTask({fn,fn2,giveParentData,filterType,searchVal}:
       
         let counter = 0;
   return (
-    <div className="">
+    <div className="h-full ">
         {tasks.length==0 &&
         <div className=' w-full flex justify-center p-10'>
             <p>No tasks Found</p>
@@ -98,12 +98,12 @@ function SmallerTask({fn,fn2,giveParentData,filterType,searchVal}:
                     <p className=" flex-1">{task.title}</p>
                 </div>
             </div>
-            {showRest && <><div className=" w-full flex items-cente justify-start">
+            {showRest==task.id && <><div className=" w-full flex justify-start">
                 <div className="w-1/3 text-left text-[#941B0F] flex">
                     <p>Description</p>
                 </div>
                 <div className="w-2/3 text-left flex flex-row justify-end items-start">
-                    <p className=" flex-1">{task.desc}</p>
+                    <p className=" flex-1 flex flex-wrap">{task.desc}</p>
                 </div>
             </div>
             <div className=" w-full flex items-cente justify-start">

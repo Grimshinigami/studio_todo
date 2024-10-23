@@ -95,7 +95,7 @@ export default function Home() {
 
   return (
     <>
-      <div className=" w-screen h-screen flex flex-col gap-2">
+      <div className=" w-screen h-screen flex flex-col gap-2 overflow-y-scroll">
         <div className=" flex">
           {!showSearchBar &&
           <div>
@@ -173,7 +173,7 @@ export default function Home() {
             </Provider>
           </div>
         </div>
-        <div className={` flex-1 border-2 border-[#941B0F] rounded-lg ${smaller==true?'mx-4':'mx-8'} my-6 overflow-y-scroll no-scrollbar`}>
+        <div className={` flex-1 border-2 border-[#941B0F] rounded-lg ${smaller==true?'mx-4':'mx-8'} my-6 `}>
           {smaller && 
           <Provider store={store}>
             <SmallerTask 
@@ -194,11 +194,12 @@ export default function Home() {
             />
           </Provider>}
         </div>
-      </div>
-      {showOverlayMenu && 
+        {showOverlayMenu && 
       <Provider store={store}>
         <OverlayMenu title={overlayTitle} fn={setShowOverlayMenu} elementId={idFromChild}/>
       </Provider>}
+      </div>
+      
       {showDeleteMenu && 
       <Provider store={store}>
         <DeleteTodo fn={setDeleteMenu} elementId={idFromChild}/>
