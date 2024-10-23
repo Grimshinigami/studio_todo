@@ -71,7 +71,7 @@ function SmallerTask({fn,fn2,giveParentData,filterType,searchVal}:
         </div>
         }
         {tasks.map((task)=>(
-        <div className={` ${showRest!=task.id?'h-[82px]':'flex flex-col'} ${counter%2!=0?'bg-[#FFF9F8]':''} gap-4 p-4 overflow-hidden`} key={task.id}>
+        <div className={` ${showRest!=task.id?'h-[82px]':'flex flex-col'} ${counter%2!=0?'bg-[#FFF9F8]':''} gap-4 p-4 `} key={task.id}>
             <div className=" w-full flex items-center">
                 <div className="w-1/3 text-left text-[#941B0F]">
                     <p>SL.No</p>

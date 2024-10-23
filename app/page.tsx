@@ -95,7 +95,7 @@ export default function Home() {
 
   return (
     <>
-      <div className=" w-screen h-screen flex flex-col gap-2 border-2">
+      <div className=" w-screen h-screen flex flex-col gap-2">
         <div className=" flex">
           {!showSearchBar &&
           <div>
@@ -156,7 +156,7 @@ export default function Home() {
           <div className={`flex-1 flex justify-end items-center gap-4 ${smaller==true?'pr-4':'pr-8'} `}>
             <button 
             onClick={()=>handleAddTask()}
-            className='flex justify-center bg-[#941B0F] h-10 items-center gap-2 p-4 text-white rounded-md'>
+            className='flex justify-center bg-[#941B0F] h-10 items-center gap-2 p-4 text-white rounded-md '>
               <Image
               src={plusicon}
               alt="plusicon"
@@ -173,7 +173,7 @@ export default function Home() {
             </Provider>
           </div>
         </div>
-        <div className={` flex-1 border-2 border-[#941B0F] rounded-lg ${smaller==true?'mx-4':'mx-8'} my-6 `}>
+        <div className={` flex-1 border-2 border-[#941B0F] rounded-lg ${smaller==true?'mx-4':'mx-8'} my-6 overflow-y-scroll no-scrollbar`}>
           {smaller && 
           <Provider store={store}>
             <SmallerTask 
